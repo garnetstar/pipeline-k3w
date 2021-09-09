@@ -3,8 +3,20 @@
 # Add steps that build, run tests, deploy, and more:
 # https://aka.ms/yaml
 
-trigger:
-- main
+parameters:
+  - name: host
+    displayName: HOST
+    type: string
+    default: lizinka
+    values:
+      - lizinka
+      - brada
+      - kopyto
+
+  - name: ver
+
+
+trigger: none
 
 
 pool:
