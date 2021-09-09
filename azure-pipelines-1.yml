@@ -10,9 +10,22 @@ parameters:
     default: NULL
     values:
       - NULL
-      - lizinka
-      - brada
-      - kopyto
+      - tit.kosik.osdc1.mall.local
+      - bobek.kosik.osdc1.mall.local
+      - brada.kosik.osdc1.mall.local
+      - cecek.kosik.osdc1.mall.local
+      - kopyto.kosik.osdc1.mall.local
+      - trkal.kosik.osdc1.mall.local
+      - fousek.kosik.osdc1.mall.local
+      - mobile.kosik.osdc1.mall.local
+      - mobile-integration.kosik.osdc2.mall.local
+      - zvejkal.kosik.osdc2.mall.local
+      - veminko.kosik.osdc2.mall.local
+      - lizinka.kosik.osdc2.mall.local
+      - epc-dev-integration.kosik.osdc2.mall.local
+      - roza.kosik.osdc2.mall.local
+      - pepina.kosik.osdc2.mall.local
+      - lizinka.kosik.os.mall.local
 
   - name: version
     displayName: Version
@@ -24,7 +37,6 @@ parameters:
     values:
       - cz
       - bg
-
 
 trigger: none
 
