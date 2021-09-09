@@ -17,6 +17,13 @@ parameters:
     displayName: Version
     default: origin/master
 
+  - name: domain
+    displayName: K3W_domain
+    default: cz
+    values:
+      - cz
+      - bg
+      
 
 trigger: none
 
