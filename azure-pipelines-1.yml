@@ -13,7 +13,9 @@ parameters:
       - brada
       - kopyto
 
-  - name: ver
+  - name: version
+    displayName: Version
+    default: origin/master
 
 
 trigger: none
