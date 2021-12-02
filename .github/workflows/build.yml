@@ -3,13 +3,16 @@ on: workflow_call
 jobs:
   build1:
     runs-on: ubuntu-latest
+    environment: prod
     steps:
       - run: cat /etc/os-release
   build2:
     runs-on: ubuntu-latest
+    environment: prod
     steps:
       - run: cat /etc/os-release
   build3:
     runs-on: ubuntu-latest
+    environment: prod
     steps:
       - run: cat /etc/os-release
