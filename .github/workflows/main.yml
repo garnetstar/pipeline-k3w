@@ -3,7 +3,7 @@ on: push
 
 jobs:
   test:
-    uses: garnetstar/pipeline-k3w/.github/workflows/test.yml@a363e1d974035c67c3bae86b8f996341929958cd
+    uses: garnetstar/pipeline-k3w/.github/workflows/test.yml@HEAD
   build:
     needs: [test]
     uses: garnetstar/pipeline-k3w/.github/workflows/build.yml@a363e1d974035c67c3bae86b8f996341929958cd
