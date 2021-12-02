@@ -16,4 +16,4 @@ jobs:
   test4:
     runs-on: ubuntu-latest
     steps:
-      - run: cat /etc/os-release
+      - run: xxxx
