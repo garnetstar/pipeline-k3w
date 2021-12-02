@@ -1,7 +1,6 @@
 name: deploy-preprod
 on:
   workflow_call:
-  push:
     branches:
       - master
 

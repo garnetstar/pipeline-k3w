@@ -1,12 +1,13 @@
 name: main-workflow
 on: push
+
 jobs:
   test:
-    uses: garnetstar/pipeline-k3w/.github/workflows/test.yml@v4
+    uses: garnetstar/pipeline-k3w/.github/workflows/test.yml@81d6e6f73c1c2579eaaca259907fc69d7e31307c
   build:
     needs: [test]
-    uses: garnetstar/pipeline-k3w/.github/workflows/build.yml@v4
+    uses: garnetstar/pipeline-k3w/.github/workflows/build.yml@81d6e6f73c1c2579eaaca259907fc69d7e31307c
   preprod:
     name: deploy to preprod
-    needs: [ test ]
-    uses: garnetstar/pipeline-k3w/.github/workflows/deploy-preprod.yml@v5
+    needs: [ build ]
+    uses: garnetstar/pipeline-k3w/.github/workflows/deploy-preprod.yml@81d6e6f73c1c2579eaaca259907fc69d7e31307c
