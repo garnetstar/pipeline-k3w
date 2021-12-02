@@ -3,11 +3,11 @@ on: push
 
 jobs:
   test:
-    uses: garnetstar/pipeline-k3w/.github/workflows/test.yml@81d6e6f73c1c2579eaaca259907fc69d7e31307c
+    uses: garnetstar/pipeline-k3w/.github/workflows/test.yml@a363e1d974035c67c3bae86b8f996341929958cd
   build:
     needs: [test]
-    uses: garnetstar/pipeline-k3w/.github/workflows/build.yml@81d6e6f73c1c2579eaaca259907fc69d7e31307c
+    uses: garnetstar/pipeline-k3w/.github/workflows/build.yml@a363e1d974035c67c3bae86b8f996341929958cd
   preprod:
     name: deploy to preprod
     needs: [ build ]
-    uses: garnetstar/pipeline-k3w/.github/workflows/deploy-preprod.yml@81d6e6f73c1c2579eaaca259907fc69d7e31307c
+    uses: garnetstar/pipeline-k3w/.github/workflows/deploy-preprod.yml@a363e1d974035c67c3bae86b8f996341929958cd
