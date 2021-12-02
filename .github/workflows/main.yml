@@ -1,0 +1,8 @@
+name: main-workflow
+on: push
+jobs:
+  test:
+    uses: garnetstar/pipeline-k3w/.github/workflows/test.yml@v1
+  build:
+    needs: [test]
+    uses: garnetstar/pipeline-k3w/.github/workflows/build.yml@v1
