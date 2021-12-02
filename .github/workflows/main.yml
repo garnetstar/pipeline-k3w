@@ -1,0 +1,14 @@
+name: main-workflow
+on: push
+
+jobs:
+  test:
+    uses: garnetstar/pipeline-k3w/.github/workflows/test.yml@a363e1d974035c67c3bae86b8f996341929958cd
+  build:
+    needs: [test]
+    uses: garnetstar/pipeline-k3w/.github/workflows/build.yml@a363e1d974035c67c3bae86b8f996341929958cd
+  preprod:
+    name: deploy to preprod
+    needs: [ build ]
+    if: github.ref == 'refs/heads/master'
+    uses: garnetstar/pipeline-k3w/.github/workflows/deploy-preprod.yml@60cff120f94c61dc2b8032cd38087f3c32df9d3b
