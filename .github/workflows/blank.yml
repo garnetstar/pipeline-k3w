@@ -1,8 +1,8 @@
 name: Test nightly
 on:
   schedule:
-    - cron: '0/6 * * * *'
-    - cron: '3/6 * * * *'
+    - cron: '0/10 * * * *'
+    - cron: '5/10 * * * *'
 
 jobs:
 
@@ -11,11 +11,11 @@ jobs:
       - ubuntu-latest
     steps:
       - name: setenv
-        if: github.event.schedule=='0/6 * * * *'
+        if: github.event.schedule=='0/10 * * * *'
         run: |
           echo "::set-env name=cronenv::even"
       - name: setenv2
-        if: github.event.schedule=='3/6 * * * *'
+        if: github.event.schedule=='5/10 * * * *'
         run: |
           echo "::set-env name=cronenv::odd"
       - name: check env value
