@@ -1,5 +1,6 @@
 name: Test nightly
 on:
+  push:
   schedule:
     - cron: '0/10 * * * *'
     - cron: '5/10 * * * *'
@@ -13,11 +14,13 @@ jobs:
       - name: setenv
         if: github.event.schedule=='0/10 * * * *'
         run: |
-          echo "::set-env name=cronenv::even"
+          echo "CRON=even" >> $GITHUB_ENV
+          
       - name: setenv2
         if: github.event.schedule=='5/10 * * * *'
         run: |
-          echo "::set-env name=cronenv::odd"
+          echo "CRON=odd" >> $GITHUB_ENV
+          
       - name: check env value
         run: |
-          echo $cronenv  
+          echo ${{ env.CRON }} 
